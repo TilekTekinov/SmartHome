@@ -143,9 +143,10 @@ class BaseController extends Controller {
    * @Route( "/getUpdate", name = "getUpdate")
    */
 
-  public function getUpdate()
+  public function getUpdate(Request $request)
   {
     $update = $this->getDoctrine()->getRepository(Sensors::class)->findOneById(1);
+    $check = $request->query->get('bol');
     $response = "";
     if ($update->getSocket1()) {
       $response += "socket1On "; 
@@ -167,9 +168,10 @@ class BaseController extends Controller {
     } else {
       $response += "lamp2Off ";
     }
-    return new Response(
-      $response
-    );
+    return $this->render('temp/lamp.html.twig', array(
+      'check' => $check,
+      'response' => $response,
+    ));
   }
 
   /**
