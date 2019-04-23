@@ -1,0 +1,33 @@
+{% extends 'temp/index.html.twig' %}
+
+{% block content %}
+    <div id="content">
+        {% if socket.getSocket1() == 1 %}
+            <div id="lamb22"><img width="130px" src="{{ asset('images/socket_onn.png') }}"></div>
+            <div id="lamb32"><a href="{{ path('socket/power1') }}"><img width="130px" src="{{ asset('images/power6.png') }}"></a></div>
+        {% else %}
+            <div id="lamb22"><img width="130px" src="{{ asset('images/socket_off.png') }}"></div>
+            <div id="lamb32"><a href="{{ path('socket/power1') }}"> <img width="130px" src="{{ asset('images/power5.png') }}"></a></div>
+        {% endif %}
+
+        {% if socket.getSocket2() == 1 %}
+            <div id="lamb4"><img width="130px" src="{{ asset('images/socket_onn.png') }}"></div>
+            <div id="lamb6"><a href="{{ path('socket/power2') }}"><img width="130px" src="{{ asset('images/power6.png') }}"></a></div>
+        {% else %}
+            <div id="lamb4"><img width="130px" src="{{ asset('images/socket_off.png') }}"></div>
+            <div id="lamb6"><a href="{{ path('socket/power2') }}"> <img width="130px" src="{{ asset('images/power5.png') }}"></a></div>
+        {% endif %}
+
+        <div id="home">
+            <div id="star1">
+                <img width="200" src="{{ asset('images/Star1.png') }}">
+            </div>
+            <div id="star2">
+                <img width="140" src="{{ asset('images/Star23.png') }}">
+            </div>
+            <div id="home2">
+                <a href="{{ path('adminka') }}"><img src="{{ asset('images/home.png') }}"></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

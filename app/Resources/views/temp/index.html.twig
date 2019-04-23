@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Smart Home</title>
+        <meta name="description" content="Smart Home, Умный дом">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    </head>
+    <body>
+        {% block header %}
+            <div id="header">
+                <img width="700px" src="{{ asset('images/Frame.png') }}">
+                <div id="header2"><img width="600px" src="{{ asset('images/header1.png') }}"></div>
+            </div>
+        {% endblock %}
+
+        {% block content %}
+            <div id="content">
+                <a href="{{ path('login') }}">Logout</a>
+                <div id="con1"><text style="margin-left:-40px; width:150px;">Управление светом</text></div>
+                <div id="img1">
+                    <a href="{{ path('lamp') }}"><img src="{{ asset('images/lamp.png') }}" width="80px"></a>
+                </div>
+                
+                <div id="con2"><text style="margin-left:-50px; width:170px;">Управление розетками</text></div>
+                <div id="img2">
+                    <a href="{{ path('socket') }}"><img src="{{ asset('images/socket_on.png') }}" width="80px"></a>
+                </div>
+
+                <div id="con3"><text style="margin-left:-10px;">Влажность</text></div>
+                <div id="img3">
+                    <a href="{{ path('humadity') }}"><img src="{{ asset('images/humidity.png') }}" width="60px"></a>
+                </div>
+                
+                <div id="con4"><text style="margin-left:-15px;">Температура</text></div>
+                <div id="img4">
+                    <a href="{{ path('temperatura') }}"><img src="{{ asset('images/temperature-2-xxl%20(1).png') }}" width="80px"></a>
+                </div>
+                {% if motion.getMotion() == 1 %}
+                    <div id="con5"><text style="margin-left:-20px;">Сигнализация</text></div>
+                    <div id="img5" style="animation: MotionM 1s linear infinite;">
+                        <img src="{{ asset('images/move2.png') }}" width="130px">
+                    </div>
+                {% else %}
+                    <div id="con5"><text style="margin-left:-20px;">Сигнализация</text></div>
+                    <div id="img5">
+                        <img src="{{ asset('images/move.png') }}" width="130px">
+                    </div>
+                {% endif %}
+
+                {% if motion.getGas() > 500 %}
+                    <div id="con6"><text style="margin-left:-20px;">Утечка газа</text></div>
+                    <div id="img6">
+                        <img src="{{ asset('images/gasanime2.gif') }}" width="80px">
+                    </div>
+                {% else %}
+                    <div id="con6"><text style="margin-left:-20px;">Утечка газа</text></div>
+                    <div id="img6">
+                        <img src="{{ asset('images/gas.png') }}" width="80px">
+                    </div>
+                {% endif %}
+
+                <div id="con7"></div>
+                <div id="con8"></div>
+                <div id="home">
+                    <div id="star1">
+                        <img width="200" src="{{ asset('images/Star1.png') }}">
+                    </div>
+                    <div id="star2">
+                        <img width="140" src="{{ asset('images/Star23.png') }}">
+                    </div>
+                    <div id="home2">
+                        <img src="{{ asset('images/home.png') }}">
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+
+        {% block footer %}
+            <div id="footer">
+                <img width="650px" src="{{ asset('images/footerr.png') }}">
+            </div>
+        {% endblock %}
+    </body>
+</html>

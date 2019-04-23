@@ -1,0 +1,189 @@
+/* Reset */
+
+	body,ul{
+		margin: 0;
+		padding: 0;
+		font-family: 'Source Sans Pro', sans-serif;
+		/*font-size: 14pt;*/
+		line-height: 1.5em;
+	}
+
+/* Header */
+
+	#header {
+		text-align: center;
+	}
+	#nav {
+		cursor: default;
+		background-color: #333;
+	}
+	#nav:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 0.75em;
+		background-color: #37c0fb;
+	}
+	#nav > ul > li {
+		position: relative;
+		display: inline-block;
+		margin-left: 1em;
+	}
+	#nav > ul > li a {
+		color: #c0c0c0;
+		text-decoration: none;
+		border: 0;
+		display: block;
+		padding: 1.5em 0.5em 1.35em 0.5em;
+	}
+	#nav > ul > li:first-child {
+		margin-left: 0;
+	}
+	#nav > ul > li:hover a {
+		color: #37c0fb;
+	}
+	#nav > ul > li.current {
+		font-weight: 600;
+	}	
+
+	#bg{
+		max-width: 100%;
+		height: 580px;
+		object-fit: scale-down;
+		background-image: url(images/gorod.gif);
+		background-size: cover;
+		z-index: -1;
+		opacity: 0.7;
+	}
+
+	#bg span{
+		text-align: center;
+    	color: #37c0fb;
+    	line-height: 1.2;
+    	letter-spacing: .1em; 
+    	margin: 15px 0; 
+    	font-size: 8vw; 
+    	font-weight: lighter; 
+    	text-transform: uppercase; 
+    	text-shadow: 1px 1px 8px rgba(0, 0, 0, .08), 2px 2px 1px rgba(0, 0, 0, .075), 4px 4px 1px rgba(0, 0, 0, .07), 6px 6px 1px rgba(0, 0, 0, .065), 8px 8px 1px rgba(0, 0, 0, .06), 10px 10px 1px rgba(0, 0, 0, .055), 12px 12px 1px rgba(0, 0, 0, .05), 14px 14px 1px rgba(0, 0, 0, .045), 16px 16px 1px rgba(0, 0, 0, .04), 18px 18px 1px rgba(0, 0, 0, .035), 20px 20px 1px rgba(0, 0, 0, .03), 22px 22px 1px rgba(0, 0, 0, .025), 24px 24px 1px rgba(0, 0, 0, .02), 26px 26px 1px rgba(0, 0, 0, .015), 28px 28px 1px rgba(0, 0, 0, .01), 30px 30px 1px rgba(0, 0, 0, .005), 32px 32px 1px rgba(0, 0, 0, .0025), 34px 34px 1px rgba(0, 0, 0, .002), 36px 36px 1px rgba(0, 0, 0, .0015), 38px 38px 1px rgba(0, 0, 0, .001); 
+    }
+    h3{
+  		font-size: 40px;
+  		font-weight: normal;
+  		cursor: pointer;
+  		text-shadow: -1px -1px #FFF,
+               -2px -2px #FFF,
+               -1px 1px #FFF,
+               -2px 2px #FFF,
+               1px 1px #FFF,
+               2px 2px #FFF,
+               1px -1px #FFF,
+               2px -2px #FFF,
+               -3px -3px 2px #BBB,
+               -3px 3px 2px #BBB,
+               3px 3px 2px #BBB,
+               3px -3px 2px #BBB;
+  		color: steelblue;
+  		transition: all 1s;
+  		text-align: center;
+    	background: #F0F8FF; /* Цвет фона под заголовком */
+   		padding: 20px; /* Поля вокруг текста */
+   }
+  
+    p{
+    	font-size: 14px;
+  		font-weight: normal;
+  		cursor: pointer;
+  		text-shadow: -1px -1px #FFF,
+               -2px -2px #FFF,
+               -1px 1px #FFF,
+               -2px 2px #FFF,
+               1px 1px #FFF,
+               2px 2px #FFF,
+               1px -1px #FFF,
+               2px -2px #FFF,
+               -3px -3px 2px #BBB,
+               -3px 3px 2px #BBB,
+               3px 3px 2px #BBB,
+               3px -3px 2px #BBB;
+  		color: steelblue;
+  		margin: 12px;
+  		text-align: center;
+    }
+    #container{
+    	width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+    }
+    #levyi{
+    	float: left;
+		width: 400px;
+    }
+    #pravyi{
+    	float:left;
+		width: 400px;
+    }
+    #sentr{
+    	float: left;
+		width: 400px;
+    }
+    #clearer {
+		clear: both;
+	}
+
+ .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: black;
+            }
+            .last-item{
+                order: 1;
+            }
+            .first-item{
+                order: -1;
+            }
+            .color1 {background-color: #F5FFFA;}
+            .color2 {background-color: #F5FFFA;}
+            .color3 {background-color: #F5FFFA;}
+            .color4 {background-color: #F5FFFA;}
+            .color5 {background-color: #F5FFFA;}
+.image {
+	position	: relative;
+	width		: 100%; /* for IE 6 */
+}
+
+h2 {
+	position	: absolute;
+	top		: 200px;
+	left		: 0;
+	width		: 100%;
+}
+
+#home{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    
+}
+h2{ text-align: center;
+  position: absolute;
+width: 649px;
+height: 81px;
+
+font-family: Holtwood One SC;
+font-style: normal;
+font-weight:lighter;
+font-size: 72px;
+line-height: 1.2;
+
+color: #37c0fb;
+
+text-shadow: 1px 1px 8px rgba(0, 0, 0, .08), 2px 2px 1px rgba(0, 0, 0, .075), 4px 4px 1px rgba(0, 0, 0, .07), 6px 6px 1px rgba(0, 0, 0, .065), 8px 8px 1px rgba(0, 0, 0, .06), 10px 10px 1px rgba(0, 0, 0, .055), 12px 12px 1px rgba(0, 0, 0, .05), 14px 14px 1px rgba(0, 0, 0, .045), 16px 16px 1px rgba(0, 0, 0, .04), 18px 18px 1px rgba(0, 0, 0, .035), 20px 20px 1px rgba(0, 0, 0, .03), 22px 22px 1px rgba(0, 0, 0, .025), 24px 24px 1px rgba(0, 0, 0, .02), 26px 26px 1px rgba(0, 0, 0, .015), 28px 28px 1px rgba(0, 0, 0, .01), 30px 30px 1px rgba(0, 0, 0, .005), 32px 32px 1px rgba(0, 0, 0, .0025), 34px 34px 1px rgba(0, 0, 0, .002), 36px 36px 1px rgba(0, 0, 0, .0015), 38px 38px 1px rgba(0, 0, 0, .001); 
+}
